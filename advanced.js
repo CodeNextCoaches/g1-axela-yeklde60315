@@ -82,6 +82,3 @@
    * show(word)
    * See above.
    */
-
-
-})();
