@@ -1,12 +1,18 @@
 body {
   display: flex;
   flex-direction: row;
+ background-image: url('Hi.gif');
+background-size: cover;
 }
 
 body div {
+  color: white;
   text-align: center;
   width: 75%;
-  border: 1px solid black;
+  border: 1px solid white;
   margin: 0 auto;
   padding: 10px;
+  font-size: 20px;
+
+
 }

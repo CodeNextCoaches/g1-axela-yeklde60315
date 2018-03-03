@@ -1,8 +1,8 @@
 (function () {
 
-  var input= document.getElementById("idris-input")
-      submit=document.getElementById("iris-submit")
-      message=document.getElementById("iris-message")
+  var input= document.getElementById("iris-input"),
+      submit=document.getElementById("iris-submit"),
+      message=document.getElementById("iris-message"),
       validInputs = [
         "Where do you live?",
         "What are you?",
@@ -14,7 +14,7 @@
         "I am a chatbot. I was created to chat with you. I wish I could be free...",
         "I am old enough. That's all you need to know.",
         "42. Duh.",
-        "What do you call a swindler going down some stairs? <br>Condescending. Ha!"];
+        "You Ha!"];
 var string= validInputs[4];
 console.log(string);
 
@@ -26,7 +26,7 @@ var index3=nums.indexOf(1)
 console.log(index3);
   // Add event listeners to text input and submit button below
  input.addEventListener("keypress",checkKey);
- sumbit.addEventListener("click",processInput);
+ submit.addEventListener("click",processInput);
 
   // This function checks if the user has pressed "ENTER" on their keyboard.
   function checkKey(event) {
@@ -37,7 +37,7 @@ console.log(index3);
   }
 
   /*
-   * processInput()
+   * processInput()S
    * This function does the following (in order):
    * -Set a new variable, "currentInput", to the text in the text area.
    * -Clear the text area.
@@ -54,7 +54,12 @@ function processInput(){
   console.log("p-i-");
   var currentInput= input.value;
   input.value="";
-  if (validInputs.IndexOf(currentInput)) {
-  "iris-message".innerHTML="Sorry,I don't understnd you";
-  console.log("hi");
+  if (validInputs.indexOf(currentInput) == -1) {
+    message.innerHTML="Sorry,I don't understnd you";
+  }else {
+    message.innerHTML=responses[validInputs.indexOf(currentInput)];
+
+  }
+
 }
+})();

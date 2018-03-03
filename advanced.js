@@ -1,7 +1,7 @@
 (function () {
 
-  var input,
-      submit,
+  var input= document.getElementById("axela-input"),
+      submit=document.getElementById("axela-submit"),
       message,
       advancedDiv,
       errorText = "I don't understand you.",
@@ -11,7 +11,7 @@
 
   // Add event listeners to text input and submit button below
   input.addEventListener("keypress", checkKey);
-  submit.addEventListener("click", processInput);
+  //submit.addEventListener("click", processInput);
 
   // This function checks if the user has pressed "ENTER" on their keyboard.
   function checkKey(event) {
@@ -82,3 +82,6 @@
    * show(word)
    * See above.
    */
+
+
+})();
